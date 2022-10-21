@@ -1,5 +1,6 @@
 {
     let tasks = [];
+    let hideDoneTasks = false;
 
     const welcome = () => {
         console.log("Witaj!");
@@ -37,32 +38,36 @@
             });
         }); 
     };
-    const renderTasks = () => {};
-
-    const renderButtons = () => {};
-    
-    const render = () => {
+    const renderTasks = () => {
         let htmlString = "";
 
-        for (const task of tasks) {
-            htmlString += `
-                <li class="tasks__item js-task">
-                    <button class="tasks__button tasks__button--toggleDone js-toggleDone">
-                        ${task.done ? "✓" : ""}
-                    </button>
-                    <span class="tasks__content${task.done ? " tasks__content--done" : ""}">
-                        ${task.content}
-                    </span>
-                    <button class="tasks__button tasks__button--remove js-remove">
-                        🗑
-                    </button>
-                </li>
-            `;
-        }
+     for (const task of tasks) {
+        htmlString += `
+            <li class="tasks__item js-task">
+                <button class="tasks__button tasks__button--toggleDone js-toggleDone">
+                    ${task.done ? "✓" : ""}
+                </button>
+                <span class="tasks__content${task.done ? " tasks__content--done" : ""}">
+                    ${task.content}
+                </span>
+                <button class="tasks__button tasks__button--remove js-remove">
+                    🗑
+                </button>
+            </li>
+        `;
+    }
 
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+    document.querySelector(".js-tasks").innerHTML = htmlString;};
 
+    const renderButtons = () => {};
+
+    const bindButtonsEvents = () => {};
+    
+    const render = () => {
+        renderTasks();
+        renderButtons();
         bindEvents();
+        bindButtonsEvents();
     };
     
     const onFormSubmint = (event) =>{
