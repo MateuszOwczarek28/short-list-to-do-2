@@ -1,5 +1,5 @@
 {
-    const tasks = [];
+    let tasks = [];
 
     const welcome = () => {
         console.log("Witaj!");
@@ -37,6 +37,9 @@
             });
         }); 
     };
+    const renderTasks = () => {};
+
+    const renderButtons = () => {};
     
     const render = () => {
         let htmlString = "";
