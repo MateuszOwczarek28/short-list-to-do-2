@@ -31,6 +31,12 @@
     const toggleAllDoneTask = (task) => {
         taska = tasks.map((task) => ({
             ...tasks,done: true }));
+            render()
+    };
+
+    const toggleHideDoneTask = () => {
+        hideDoneTasks = !hideDoneTasks;
+        render()
     };
 
     const bindEvents = () => {
