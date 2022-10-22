@@ -7,14 +7,14 @@
     };
 
     const addNewTask = (newTaskContent) => {
-        tasks = [...tasks, { content: newTaskContent }];
+        tasks = [...tasks, { content: newTaskContent, done: false }];
         render();
     };
 
     const removeTask = (taskIndex) => {
         tasks = [
             ...tasks.slice(0, taskIndex),
-            ...tasks.slice(taskIndex, 1),
+            ...tasks.slice(taskIndex, + 1),
         ];
         render();
     }; 
@@ -30,7 +30,7 @@
             ];
             render()
         };
-        const allTasksDone = () => {
+        const allTasksDone = (task) => {
             tasks = tasks.map((task) =>({
                 ...task, done: true,
             }));
@@ -63,7 +63,7 @@
 
      for (const task of tasks) {
         htmlString += `
-            <li class="tasks__item js-task">
+            <li class="tasks__item${task.done && hideDoneTasks ?  " tasks__item--hidden": ""} js-task">
                 <button class="tasks__button tasks__button--toggleDone js-toggleDone">
                     ${task.done ? "✓" : ""}
                 </button>
