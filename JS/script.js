@@ -1,23 +1,36 @@
 {
-    const tasks = [];
+   let tasks = [];
+
+   let hideDoneTasks = false;
 
     const welcome = () => {
         console.log("Witaj!");
     };
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({content: newTaskContent});
+        tasks = [
+            ...tasks, {content: newTaskContent, done: false}];
         render();
     };
 
     const removeTask = (taskIndex) => {
-        tasks.splice(taskIndex, 1);
+        tasks = [
+            ...tasks.slice(0, taskIndex),
+            ...tasks.slice(taskIndex + 1)];
         render();
     }; 
 
-    const toggleTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done;
+    const toggleTaskDone = (taskIndex) => { 
+        tasks = [
+            ...tasks.slice(0, taskIndex),
+            {...tasks[taskIndex], done: !tasks[taskIndex].done },
+            ...tasks.slice(taskIndex + 1)
+        ]
         render();
+    };
+    const toggleAllDoneTask = (task) => {
+        taska = tasks.map((task) => ({
+            ...tasks,done: true }));
     };
 
     const bindEvents = () => {
@@ -30,13 +43,13 @@
         });
 
         const toggleDoneButtons = document.querySelectorAll(".js-toggleDone");
-        
-        toggleDoneButtons.forEach((toggleDoneButton, taskIndex) => {
+         toggleDoneButtons.forEach((toggleDoneButton, taskIndex) => {
             toggleDoneButton.addEventListener("click",() => {
                 toggleTaskDone(taskIndex);
             });
         }); 
     };
+    
     
     const render = () => {
         let htmlString = "";
