@@ -79,7 +79,22 @@
 
     document.querySelector(".js-tasks").innerHTML = htmlString;};
 
-    const renderButtons = () => { };
+    const renderButtons = () => {
+        let htmlButtonsString="";
+        
+        if (!tasks.length) {
+            return;
+        }
+        htmlButtonsString +=`
+        <button class="hidden__item js-hide DoneTask">
+        $hideDoneTasks "Pokaż": "Ukryj"}ukończone</button>
+        <button class="js-markAllDone hidden__item"${
+            tasks.every((tasks) => task.done) ?"disabled" : ""
+        }> Ukończ wszystkie </button>`;
+
+        document.querySelector("js-doneButtons").innerHTML = htmlButtonsString;
+     };
+
 
     const bindButtonsEvents = () => { };
     
