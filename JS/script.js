@@ -28,17 +28,6 @@
         ];
         render();
     };
-    const markAllDone = () => {
-        tasks = tasks.map((task) => ({
-            ...task, 
-            done: true }));
-            render();
-    };
-
-    const toggleHideDoneTask = () => {
-        hideDoneTasks = !hideDoneTasks;
-        render();
-    };
 
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
@@ -96,6 +85,18 @@
         ${tasks.every(( task) => task.done) ? "disabled" : ""}>
         Ukończ wszystkie</button>`;
     };
+    
+    const markAllDone = () => {
+        tasks = tasks.map((task) => ({
+            ...task, done: true }));
+            render();
+    };
+
+    const toggleHideDoneTasks = () => {
+        hideDoneTasks = !hideDoneTasks;
+        render();
+    };
+    
     const bindButtonsEvents = () => {
         const markAllDoneButton = document.querySelector(".js-markAllDone");
 
