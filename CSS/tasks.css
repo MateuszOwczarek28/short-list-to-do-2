@@ -38,6 +38,6 @@
 .tasks__content--done {
     text-decoration: line-through;
 }
-.tasks__item--hiden {
+.tasks__item--hidden {
     display: none;
 }
