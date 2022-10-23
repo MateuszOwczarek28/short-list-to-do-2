@@ -8,10 +8,11 @@
     background-color: transparent;
     margin: 0 0 15px;
     border: none;
+    transition: 0.5s;
 }
 
 .buttons__sectionTwo:hover {
-    color: rgb(35, 70%, 51%);
+    color: rgb(6, 93, 93);
     background-color: transparent;
     margin: 0 0 15px;
     border: none;
