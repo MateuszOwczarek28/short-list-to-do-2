@@ -104,9 +104,17 @@
         if (markAllDoneButton) {
         markAllDoneButton.addEventListener("click", markAllTasksDone);
       }
-     }
-    // działa tylko nie widać przycisków css// 9.30
+
+      const toggleHideDoneTasksButton = document.querySelector(".js-toggleHideDoneTasks")
+
+      if(toggleHideDoneTasksButton) {
+        toggleHideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
+      }
+     };
+
     
+     
+     
     const onFormSubmint = (event) =>{
         event.preventDefault();
 
