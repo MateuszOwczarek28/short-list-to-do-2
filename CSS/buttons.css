@@ -1,13 +1,12 @@
 .buttons {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
 }
 
 .buttons__section {
     color: teal;
     background-color: transparent;
-    margin: 0 0 25px;
+    margin: 0 0 0 25px;
     border: none;
     transition: color 0.5s;
 }
@@ -17,4 +16,7 @@
     background-color: transparent;
     margin: 0 0 15px;
     border: none;
+}
+.buttons__section:disabled {
+    color: rgb(55, 54, 54);
 }
