@@ -1,0 +1,18 @@
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttons__sectionTwo {
+    color: teal;
+    background-color: transparent;
+    margin: 0 0 15px;
+    border: none;
+}
+
+.buttons__sectionTwo:hover {
+    color: rgb(35, 70%, 51%);
+    background-color: transparent;
+    margin: 0 0 15px;
+    border: none;
+}
