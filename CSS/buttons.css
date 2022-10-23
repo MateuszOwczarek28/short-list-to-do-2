@@ -1,17 +1,18 @@
 .buttons {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
-.buttons__sectionTwo {
+.buttons__section {
     color: teal;
     background-color: transparent;
-    margin: 0 0 15px;
+    margin: 0 0 25px;
     border: none;
-    transition: 0.5s;
+    transition: color 0.5s;
 }
 
-.buttons__sectionTwo:hover {
+.buttons__section:hover {
     color: rgb(6, 93, 93);
     background-color: transparent;
     margin: 0 0 15px;
