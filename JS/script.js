@@ -56,13 +56,13 @@
         }); 
     };
     
-    
     const render = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-                <li class="tasks__item js-task">
+                <li class=
+                "tasks__item${task.done && hideDoneTasks ? "tasks__item--hiden" : ""} js-task">
                     <button class="tasks__button tasks__button--toggleDone js-toggleDone">
                         ${task.done ? "✓" : ""}
                     </button>
@@ -76,10 +76,36 @@
             `;
         }
 
-        document.querySelector(".js-tasks").innerHTML = htmlString;
-
+        document.querySelector(".js-tasks").innerHTML = htmlString; //inne niż w you code 6:37
         bindEvents();
     };
+
+    const renderButtons = () => {
+        const buttonsElement = document.querySelector(".js-buttons");
+
+        if (!tasks.length) {
+            buttonsElement.innerHTML = "";
+            return;
+        };
+
+        buttonsElement.innerHTML = `
+        <button class="buttons__sectionTwo js-toggleHideDoneTasks">
+        ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+        </button>
+        <button class="buttons__sectionTwo js-markAllDone"
+        ${tasks.every(({ done }) => done) ? "disabled" : ""}>
+        Ukończ wszystkie
+        </button>
+        `;
+    };
+    const bindButtonsEvents = () => {
+        const markAllDoneButton = document.querySelector(".js-markAllDone");
+
+        if (markAllDoneButton) {
+        markAllDoneButton.addEventListener("click", markAllTasksDone);
+      }
+     }
+    // działa tylko nie widać przycisków css// 9.30
     
     const onFormSubmint = (event) =>{
         event.preventDefault();
