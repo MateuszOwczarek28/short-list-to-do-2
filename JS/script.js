@@ -3,10 +3,6 @@
 
    let hideDoneTasks = false;
 
-    const welcome = () => {
-        console.log("Witaj!");
-    };
-
     const addNewTask = (newTaskContent) => {
         tasks = [
             ...tasks, {content: newTaskContent, done: false}];
@@ -104,12 +100,12 @@
         markAllDoneButton.addEventListener("click", markAllDone);
       }
 
-      const toggleHideDoneButton = document.querySelector(".js-toogleHideDoneTasks")
+      const toggleHideDoneTasksButton = document.querySelector(".js-toggleHideDoneTasks");
 
-      if(toggleHideDoneButton) {
-        toggleHideDoneButton.addEventListener("click", toggleHideDoneTasks);
-      }
-     };
+      if (toggleHideDoneTasksButton) {
+        toggleHideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
+      };
+    };
 
      const render = () => {
         renderTasks();
@@ -134,7 +130,6 @@
     
     const init = () => {
         render();
-        welcome();
 
         const from = document.querySelector(".js-form");
         from.addEventListener("submit", onFormSubmint);
