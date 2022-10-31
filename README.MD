@@ -1,6 +1,6 @@
 # Short list to do
 
-[link]( https://mateuszowczarek28.github.io/short-list-to-do/)
+[link]( https://mateuszowczarek28.github.io/short-list-to-do-2/)
 
 ## Description
 
