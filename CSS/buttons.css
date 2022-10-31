@@ -3,12 +3,10 @@
     flex-wrap: wrap;
 }
 
-@media(max-width 767px) {
-    .buttons__section {
-        flex-basis: 100%;
-        margin: 15px;
+@media (max-width: 767px) {
+    .section__header {
+        grid-template-columns: 1fr;
     }
-}
 
 .buttons__section {
     color: teal;
