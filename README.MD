@@ -4,7 +4,7 @@
 
 ## Description
 
-### This project is a mini application about list to do. Here you can write a task to be performed and mark whether it has been completed or deleted. 
+### This project is a mini application about list to do. Here you can write a task to be performed and mark whether it has been completed or deleted. I added new functions to the old version of the project: Two buttons that will complete the tasks and hide or restore them
 
 ### Show
 
