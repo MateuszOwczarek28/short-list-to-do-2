@@ -2,6 +2,12 @@
     display: flex;
     flex-wrap: wrap;
 }
+@media(max-width 768px) {
+    .buttons__section {
+        flex-basis: 100%;
+        margin: 15px;
+    }
+}
 
 .buttons__section {
     color: teal;
