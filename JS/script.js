@@ -36,7 +36,7 @@
 
         const toggleDoneButtons = document.querySelectorAll(".js-toggleDone");
          toggleDoneButtons.forEach((toggleDoneButton, taskIndex) => {
-            toggleDoneButton.addEventListener("click",() => {
+            toggleDoneButton.addEventListener("click", () => {
                 toggleTaskDone(taskIndex);
             });
         }); 
@@ -78,7 +78,7 @@
         ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
         </button>
         <button class="buttons__section js-markAllDone"
-        ${ tasks.every((task) => task.done) ? " disabled" : ""}>
+        ${tasks.every((task) => task.done) ? " disabled" : ""}>
         Ukończ wszystkie</button>`;
     };
 
@@ -98,7 +98,7 @@
 
         if (markAllDoneButton) {
         markAllDoneButton.addEventListener("click", markAllDone);
-      }
+      };
 
       const toggleHideDoneTasksButton = document.querySelector(".js-toggleHideDoneTasks");
 
@@ -107,12 +107,12 @@
       };
     };
 
-     const render = () => {
+    const render = () => {
         renderTasks();
         renderButtons();
         bindEvents();
         bindButtonsEvents();
-      };
+    };
 
     const onFormSubmint = (event) =>{
         event.preventDefault();
