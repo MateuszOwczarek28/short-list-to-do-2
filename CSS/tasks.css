@@ -16,12 +16,15 @@
 .tasks__button--toggleDone {
     background: hsl(120, 94%, 27%);
 }
+
 .tasks__button--toggleDone:hover {
     background: hsl(120, 70%, 51%);
 }
+
 .tasks__button--remove {
     background: hsl(348, 93%, 32%);
 }
+
 .tasks__button--remove:hover {
     background: hsl(348, 70%, 51%);
 }

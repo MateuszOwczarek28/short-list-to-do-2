@@ -2,7 +2,8 @@
     display: flex;
     flex-wrap: wrap;
 }
-@media(max-width 768px) {
+
+@media(max-width 767px) {
     .buttons__section {
         flex-basis: 100%;
         margin: 15px;
@@ -22,6 +23,7 @@
     background-color: transparent;
     border: none;
 }
+
 .buttons__section:disabled {
     color: rgb(55, 54, 54);
 }
