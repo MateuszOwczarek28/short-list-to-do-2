@@ -8,7 +8,7 @@
 
 ### Show
 
-![gif](https://github.com/MateuszOwczarek28/short-list-to-do/blob/main/picture/pokaz.gif)
+![gif](https://github.com/MateuszOwczarek28/short-list-to-do-2/blob/main/picture/pokaz.gif)
 
 ### What I use:
 - HTML
