@@ -26,11 +26,6 @@
 }
 
 .form__button:hover {
-    color: white;
-    background: rgb(7, 194, 194);
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
     transform: scale(1.1);
-    margin: 5px;
+    cursor: pointer;;
 }
